@@ -1,0 +1,10 @@
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.exe.config
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.exe
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.pdb
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.csprojResolveAssemblyReference.cache
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.Form1.resources
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.Properties.Resources.resources
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.csproj.GenerateResource.Cache
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.csproj.CoreCompileInputs.cache
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.exe
+C:\Users\Elliot\Source\Repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.pdb
