@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logics
 {
-    public class Class1
+    class Validation
     {
     }
 }

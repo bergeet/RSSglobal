@@ -86,12 +86,13 @@
             // 
             // btnAddPod
             // 
-            this.btnAddPod.Location = new System.Drawing.Point(12, 230);
+            this.btnAddPod.Location = new System.Drawing.Point(12, 238);
             this.btnAddPod.Name = "btnAddPod";
             this.btnAddPod.Size = new System.Drawing.Size(75, 23);
             this.btnAddPod.TabIndex = 4;
             this.btnAddPod.Text = "Submit";
             this.btnAddPod.UseVisualStyleBackColor = true;
+            this.btnAddPod.Click += new System.EventHandler(this.btnAddPod_Click);
             // 
             // lblUpdateFrequency
             // 
@@ -133,7 +134,7 @@
             this.txtEnterName.Name = "txtEnterName";
             this.txtEnterName.Size = new System.Drawing.Size(202, 22);
             this.txtEnterName.TabIndex = 10;
-            this.txtEnterName.Text = "Ange namn:";
+            this.txtEnterName.Text = "Ange namn";
             // 
             // lblEnterCategory
             // 
@@ -160,6 +161,7 @@
             this.btnNewCategory.TabIndex = 13;
             this.btnNewCategory.Text = "Ny kategori";
             this.btnNewCategory.UseVisualStyleBackColor = true;
+            this.btnNewCategory.Click += new System.EventHandler(this.btnNewCategory_Click);
             // 
             // cbCategories
             // 
@@ -204,7 +206,7 @@
             this.btnConfigPodd.Text = "Konfigurera podd";
             this.btnConfigPodd.UseVisualStyleBackColor = true;
             // 
-            // Presentation
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,7 +229,7 @@
             this.Controls.Add(this.lblAddPod);
             this.Controls.Add(this.lblCategories);
             this.Controls.Add(this.lstBoxPods);
-            this.Name = "Presentation";
+            this.Name = "MainForm";
             this.Text = "iRSS-LäsarN";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
             this.ResumeLayout(false);
