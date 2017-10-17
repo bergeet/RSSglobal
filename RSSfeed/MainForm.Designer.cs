@@ -1,6 +1,6 @@
 ﻿namespace RSSfeed
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,6 +44,8 @@
             this.cbCategories = new System.Windows.Forms.ComboBox();
             this.lblPods = new System.Windows.Forms.Label();
             this.cbPods = new System.Windows.Forms.ComboBox();
+            this.btnRemoveFeed = new System.Windows.Forms.Button();
+            this.btnConfigPodd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.lstBoxPods.ItemHeight = 16;
             this.lstBoxPods.Location = new System.Drawing.Point(357, 61);
             this.lstBoxPods.Name = "lstBoxPods";
-            this.lstBoxPods.Size = new System.Drawing.Size(357, 468);
+            this.lstBoxPods.Size = new System.Drawing.Size(357, 420);
             this.lstBoxPods.TabIndex = 0;
             // 
             // lblCategories
@@ -170,7 +172,7 @@
             // lblPods
             // 
             this.lblPods.AutoSize = true;
-            this.lblPods.Location = new System.Drawing.Point(492, 9);
+            this.lblPods.Location = new System.Drawing.Point(590, 11);
             this.lblPods.Name = "lblPods";
             this.lblPods.Size = new System.Drawing.Size(67, 17);
             this.lblPods.TabIndex = 15;
@@ -179,16 +181,36 @@
             // cbPods
             // 
             this.cbPods.FormattingEnabled = true;
-            this.cbPods.Location = new System.Drawing.Point(495, 31);
+            this.cbPods.Location = new System.Drawing.Point(593, 31);
             this.cbPods.Name = "cbPods";
             this.cbPods.Size = new System.Drawing.Size(121, 24);
             this.cbPods.TabIndex = 16;
             // 
-            // Form1
+            // btnRemoveFeed
+            // 
+            this.btnRemoveFeed.Location = new System.Drawing.Point(502, 487);
+            this.btnRemoveFeed.Name = "btnRemoveFeed";
+            this.btnRemoveFeed.Size = new System.Drawing.Size(121, 28);
+            this.btnRemoveFeed.TabIndex = 17;
+            this.btnRemoveFeed.Text = "Ta bort podfeed";
+            this.btnRemoveFeed.UseVisualStyleBackColor = true;
+            // 
+            // btnConfigPodd
+            // 
+            this.btnConfigPodd.Location = new System.Drawing.Point(357, 487);
+            this.btnConfigPodd.Name = "btnConfigPodd";
+            this.btnConfigPodd.Size = new System.Drawing.Size(139, 28);
+            this.btnConfigPodd.TabIndex = 18;
+            this.btnConfigPodd.Text = "Konfigurera podd";
+            this.btnConfigPodd.UseVisualStyleBackColor = true;
+            // 
+            // Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 542);
+            this.Controls.Add(this.btnConfigPodd);
+            this.Controls.Add(this.btnRemoveFeed);
             this.Controls.Add(this.cbPods);
             this.Controls.Add(this.lblPods);
             this.Controls.Add(this.cbCategories);
@@ -205,8 +227,8 @@
             this.Controls.Add(this.lblAddPod);
             this.Controls.Add(this.lblCategories);
             this.Controls.Add(this.lstBoxPods);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Presentation";
+            this.Text = "iRSS-LäsarN";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,6 +253,8 @@
         private System.Windows.Forms.ComboBox cbCategories;
         private System.Windows.Forms.Label lblPods;
         private System.Windows.Forms.ComboBox cbPods;
+        private System.Windows.Forms.Button btnRemoveFeed;
+        private System.Windows.Forms.Button btnConfigPodd;
     }
 }
 
