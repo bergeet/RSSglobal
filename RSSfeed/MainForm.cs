@@ -17,11 +17,33 @@ namespace RSSfeed
 {
     public partial class MainForm : Form
     {
+        PodcastList podList = new PodcastList();
+
         public MainForm()
         {
+            load();
             InitializeComponent();
         }
-        PodcastList podList = new PodcastList();
+        
+        public void load()
+        {
+            var xmlDoc = XDocument.Load("Podcasts.xml");
+            var podcasts = xmlDoc.Descendants("Podcast");
+
+            var podObj = podcasts.Select(element => new Podcast
+            {
+                Url = element.Descendants("Url").Single().Value,
+                Name = element.Descendants("Name").Single().Value,
+                Interval = int.Parse(element.Descendants("Interval").Single().Value)
+            });
+
+            foreach (var aPod in podObj)
+            {
+                podList.AddPod(aPod);
+            }
+
+        }
+
 
         private void btnAddPod_Click(object sender, EventArgs e)
         {
@@ -32,20 +54,12 @@ namespace RSSfeed
 
             Xml.SaveListData(podList.GetPodcastList(), "Podcasts.xml");
 
-           /* List<object> podList = Xml.LoadListData(pods, "Podcasts.xml");
-            foreach (var item in podList)
-            {
-                lstBoxPods.Items.Add(item);
-
-            }*/
-
-
 
         }
 
         private void btnNewCategory_Click(object sender, EventArgs e)
         {
-            Xml.LoadXmlToList("Podcasts.xml", "Url");
+            
         }
     }
 }

@@ -10,9 +10,11 @@ using System.Xml.Serialization;
 
 namespace DataAccess
 {
+
+
     public class Xml
     {
-        public static void SaveListData(object obj, string filename)
+            public static void SaveListData(object obj, string filename)
         {
             var serializer = new XmlSerializer(obj.GetType());
 
@@ -21,26 +23,6 @@ namespace DataAccess
                 serializer.Serialize(stream, obj);
             }
         }
-
-        /*public static List<object> LoadListData(object obj, string filename)
-        {
-            var serializer = new XmlSerializer(obj.GetType());
-
-            using (var stream = new StreamReader(filename))
-            {
-                var items = (List<object>)serializer.Deserialize(stream);
-                return items;
-            }
-        }*/
-
-        public static void LoadXmlToList(string filename, string output)
-        {
-            XDocument doc = XDocument.Load(filename);
-            var authors = doc.Descendants(output);
-            foreach (var author in authors)
-            {
-                MessageBox.Show(author.Value);
-            }
-        }
+  
     }
 }

@@ -25,6 +25,10 @@ namespace Logics
             podcastList.Add(aPod);
         }
 
+        public void AddPod(Podcast podcast)
+        {
+            podcastList.Add(podcast);
+        }
         
     }
 }
