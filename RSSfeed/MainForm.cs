@@ -20,6 +20,7 @@ namespace RSSfeed
     {
         PodcastList podcastList = new PodcastList();
         CategoryList categoryList = new CategoryList();
+        int intervalMS;
 
         public MainForm()
         {
@@ -49,7 +50,7 @@ namespace RSSfeed
             //var selectedInterval = numericUpdateFrequency.
 
             
-            podcastList.AddPod(podUrl, podName, 0, getCategory);
+            podcastList.AddPod(podUrl, podName, intervalMS, getCategory);
             //addObjToList(string name)
 
             foreach (var item in cbNewCategories.Items)
@@ -70,6 +71,12 @@ namespace RSSfeed
         private void btnNewCategory_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void numericUpdateFrequency_ValueChanged(object sender, EventArgs e)
+        {
+            int outcome = (int)numericUpdateFrequency.Value;
+            intervalMS = TimeConverter.hourToMS(outcome);
         }
     }
 }

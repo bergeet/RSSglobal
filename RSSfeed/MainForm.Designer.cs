@@ -118,6 +118,7 @@
             this.numericUpdateFrequency.Name = "numericUpdateFrequency";
             this.numericUpdateFrequency.Size = new System.Drawing.Size(48, 22);
             this.numericUpdateFrequency.TabIndex = 8;
+            this.numericUpdateFrequency.ValueChanged += new System.EventHandler(this.numericUpdateFrequency_ValueChanged);
             // 
             // lblEnterName
             // 
