@@ -40,11 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategorizeEntries.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="CategoryList.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="PodcastList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeConverter.cs" />
     <Compile Include="Validation.cs" />
+    <Compile Include="XmlCommunication.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">

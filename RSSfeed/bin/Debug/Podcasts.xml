@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Podcast>
-    <Url>1231233</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Url>1231233</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
+    <Category>Dokumentär</Category>
     <Url>Ange url</Url>
     <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
+    <Category>Dokumentär</Category>
     <Url>Ange url</Url>
     <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
+    <Category>Dokumentär</Category>
     <Url>Ange url</Url>
     <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
-    <Url>1223</Url>
-    <Name>qweqwe</Name>
+    <Category>Dokumentär</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
-    <Url>1223</Url>
-    <Name>qweqwe</Name>
+    <Category>Dokumentär</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Hälsa</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Hälsa</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>0</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>Elliot</Url>
+    <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
 </ArrayOfPodcast>

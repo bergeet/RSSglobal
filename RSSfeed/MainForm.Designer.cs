@@ -148,6 +148,10 @@
             // cbNewCategories
             // 
             this.cbNewCategories.FormattingEnabled = true;
+            this.cbNewCategories.Items.AddRange(new object[] {
+            "Sport",
+            "Dokumentär",
+            "Hälsa"});
             this.cbNewCategories.Location = new System.Drawing.Point(12, 199);
             this.cbNewCategories.Name = "cbNewCategories";
             this.cbNewCategories.Size = new System.Drawing.Size(205, 24);

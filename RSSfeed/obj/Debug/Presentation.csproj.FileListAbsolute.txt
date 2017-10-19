@@ -1,9 +1,7 @@
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.exe.config
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.exe
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\RSSfeed.pdb
-C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\DataAccess.dll
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\Logics.dll
-C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\DataAccess.pdb
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\Logics.pdb
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.DialogForm.resources

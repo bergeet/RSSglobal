@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Logics
 {
-    public class Category
+    public abstract class CategorizeEntries
     {
-        private string name;
 
+        public virtual void AddObjToList(object obj)
+        {
 
-        public string Name { get; set; }
-
+        }
+        
 
         
 

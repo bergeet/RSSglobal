@@ -14,15 +14,11 @@ namespace DataAccess
 
     public class Xml
     {
-            public static void SaveListData(object obj, string filename)
-        {
-            var serializer = new XmlSerializer(obj.GetType());
+        
 
-            using (var stream = new StreamWriter(filename))
-            {
-                serializer.Serialize(stream, obj);
-            }
-        }
+          
+        
+
   
     }
 }

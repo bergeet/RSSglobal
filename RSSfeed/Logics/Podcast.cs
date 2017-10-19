@@ -11,7 +11,9 @@ namespace Logics
         private string url;
         private string name;
         private int interval;
+        private string category;
 
+        public string Category { get; set; } 
         public string Url { get; set; }
         public string Name { get; set; }
         public int Interval { get; set; }
