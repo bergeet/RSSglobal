@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lstBoxPods = new System.Windows.Forms.ListBox();
             this.lblCategories = new System.Windows.Forms.Label();
             this.lblAddPod = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.cbPods = new System.Windows.Forms.ComboBox();
             this.btnRemoveFeed = new System.Windows.Forms.Button();
             this.btnConfigPodd = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,6 +216,10 @@
             this.btnConfigPodd.UseVisualStyleBackColor = true;
             this.btnConfigPodd.Click += new System.EventHandler(this.btnConfigPodd_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,6 +271,7 @@
         private System.Windows.Forms.ComboBox cbPods;
         private System.Windows.Forms.Button btnRemoveFeed;
         private System.Windows.Forms.Button btnConfigPodd;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

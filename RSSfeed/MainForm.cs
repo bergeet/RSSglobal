@@ -16,7 +16,7 @@ using System.Xml.Serialization;
 
 namespace RSSfeed
 {
-    public partial class MainForm : Form
+    internal partial class MainForm : Form
     {
         PodcastList podcastList = new PodcastList();
         CategoryList categoryList = new CategoryList();
@@ -28,9 +28,6 @@ namespace RSSfeed
             setCategoryListOnLoad();
             XmlCommunication.loadCategory(categoryList);
             XmlCommunication.loadPodcasts(podcastList);
-
-
-
         }
 
         private void setCategoryListOnLoad()
@@ -48,11 +45,9 @@ namespace RSSfeed
             var podUrl = txtAddPod.Text;
             var podName = txtEnterName.Text;
             var getCategory = (string)cbNewCategories.SelectedItem;
-            //var selectedInterval = numericUpdateFrequency.
 
             
-            podcastList.AddPod(podUrl, podName, intervalMS, getCategory);
-            //addObjToList(string name)
+            podcastList.AddPod(podUrl, podName, intervalMS, getCategory); //Adderar podcasten till ett objekt sedan till en lista
 
             foreach (var item in cbNewCategories.Items)
             {
@@ -60,7 +55,8 @@ namespace RSSfeed
             }
        
             XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
-            // Xml.SaveListData(categoryList.GetCategoryList(), "Podcasts.xml")
+            fillCbCategories(); //Ändra staten av comboboxen kategori
+
 
         }
 
@@ -72,32 +68,37 @@ namespace RSSfeed
 
         private void numericUpdateFrequency_ValueChanged(object sender, EventArgs e)
         {
+            //Konverterar intervallen till rätt format för koden (milllisekund)
             int outcome = (int)numericUpdateFrequency.Value;
             intervalMS = TimeConverter.hourToMS(outcome);
         }
 
         private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbPods.Items.Clear();
-            foreach (Podcast podcast in podcastList.GetPodcastList())
-            {
-                if(podcast.Category == (string)cbCategories.SelectedItem)
-                {
-                    cbPods.Items.Add(podcast.Name);
-                }
-            }
+            fillCbCategories();
         }
 
         private void cbPods_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            lstBoxPods.Items.Clear();
+            foreach (var podcast in podcastList.GetPodcastList())
+            {
+                foreach (var episode in podcast.GetEpisodes())
+                {
+                    if(podcast.Name == (string)cbPods.SelectedItem)
+                    lstBoxPods.Items.Add(episode.AvsnittsTitel);
+                }
+              
+                
+            }
         }
 
         private void btnConfigPodd_Click(object sender, EventArgs e)
         {
             var selectedInput = (string)cbPods.SelectedItem;
             Podcast aPod = new Podcast();
-            foreach (var entry in podcastList.GetPodcastList())
+            foreach (var entry in podcastList.GetPodcastList()) //loopar igenom podcasts som finns i minnet och 
+                                                                //hämtar objektet som ska ändras
             {
                 if(entry.Name == selectedInput)
                 {
@@ -105,10 +106,28 @@ namespace RSSfeed
                 }
                 
             }
-            
+            //Skapar en ny dialogruta och matar in ett podcast objekt till konstruktorn
+            //Som att köra in en bil till service där den ska målas om och få nytt regnummer
             DialogForm dialogForm = new DialogForm(aPod, podcastList);
-            dialogForm.setHeader(aPod.Name);
+            
             dialogForm.Show();
+        }
+
+        private void fillCbCategories()
+        {
+            cbPods.Items.Clear();
+            foreach (Podcast podcast in podcastList.GetPodcastList())
+            {
+                if (podcast.Category == (string)cbCategories.SelectedItem)
+                {
+                    cbPods.Items.Add(podcast.Name);
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Interval = intervalMS;
         }
     }
 }

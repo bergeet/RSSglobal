@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Logics
 {
-    class Episodefetch
+    public class Episodefetch
     {
-        public void FetchEpsiodes(string url)
+        public static List<Episodes> FetchEpisodes(string url)
         {
             List<Episodes> episodeCollection = new List<Episodes>();
 
@@ -34,6 +34,7 @@ namespace Logics
                 Episodes ettAvsnitt = new Episodes(title.InnerText, link.InnerText);
                 episodeCollection.Add(ettAvsnitt);
             }
+            return episodeCollection;
         }
             
         

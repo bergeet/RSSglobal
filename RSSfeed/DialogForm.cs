@@ -11,15 +11,12 @@ using System.Windows.Forms;
 
 namespace RSSfeed
 {
-    public partial class DialogForm : Form
+    internal partial class DialogForm : Form
     {
         Podcast podcast;
         PodcastList podcastList;
         
         private int intervalMS;
-
-
-       
 
         public DialogForm(Podcast aPod, PodcastList aPodList)
         {
@@ -27,12 +24,17 @@ namespace RSSfeed
             podcastList = aPodList;
             podcast = aPod;
             load();
-            
+            setFields();
+
+
         }
 
-        public void setHeader(string name)
+        public void setFields()
         {
-            lblTitle.Text = name;
+            lblTitle.Text = podcast.Name;
+            txtNewName.Text = podcast.Name;
+            txtNewUrl.Text = podcast.Url;
+
         }
 
         private void load()
@@ -54,7 +56,6 @@ namespace RSSfeed
             podcast.Interval = intervalMS;
             
             XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
-
 
         }
 

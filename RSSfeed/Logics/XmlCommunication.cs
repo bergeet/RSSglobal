@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace Logics
 {
-    public class XmlCommunication
+    public abstract class XmlCommunication
     {
 
 

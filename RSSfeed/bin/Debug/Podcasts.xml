@@ -2,92 +2,20 @@
 <ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Podcast>
     <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
+    <Url>https://rss.acast.com/filipandfredrik</Url>
+    <Name>Filip &amp; Fredrik</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
     <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
+    <Url>https://rss.acast.com/tackforkaffet</Url>
+    <Name>TFK</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
     <Category>Sport</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
+    <Url>https://rss.acast.com/lundh</Url>
+    <Name>Olof Lundhs</Name>
     <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Sport</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Hälsa</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Hälsa</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Sport</Category>
-    <Url>Elliot</Url>
-    <Name>Ange namn</Name>
-    <Interval>0</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Hälsa</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>7200000</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Sport</Category>
-    <Url>Ange url</Url>
-    <Name>Ange namn</Name>
-    <Interval>14400000</Interval>
-  </Podcast>
-  <Podcast>
-    <Category>Sport</Category>
-    <Url>jöjje</Url>
-    <Name>Hej</Name>
-    <Interval>3600000</Interval>
   </Podcast>
 </ArrayOfPodcast>

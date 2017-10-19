@@ -11,13 +11,13 @@ namespace Logics
         private string episodeTitle = null;
         private string episodeUrl = null;
 
-        public string _avsnittsTitel { get; set; }
-        public string _avsnittsUrl { get; set; }
+        public string AvsnittsTitel { get; set; }
+        public string AvsnittsUrl { get; set; }
 
         public Episodes(string titel, string url)
         {
-            episodeTitle = titel;
-            episodeUrl = url;
+            AvsnittsTitel = titel;
+            AvsnittsUrl = url;
         }
 
         public string GetAvsnittsTitel()
@@ -28,5 +28,7 @@ namespace Logics
         {
             return episodeUrl;
         }
+
+        
     }
 }

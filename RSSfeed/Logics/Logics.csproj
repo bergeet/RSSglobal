@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategorizeEntries.cs" />
+    <Compile Include="MainList.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryList.cs" />
     <Compile Include="Episodefetch.cs" />

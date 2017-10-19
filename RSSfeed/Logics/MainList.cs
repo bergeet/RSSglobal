@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logics
 {
-    public abstract class CategorizeEntries
+    public abstract class MainList
     {
 
         public virtual void AddObjToList(object obj)
