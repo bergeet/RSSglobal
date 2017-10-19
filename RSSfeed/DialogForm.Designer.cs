@@ -33,7 +33,7 @@
             this.txtNewUrl = new System.Windows.Forms.TextBox();
             this.lblNewName = new System.Windows.Forms.Label();
             this.txtNewName = new System.Windows.Forms.TextBox();
-            this.cbNewCategories = new System.Windows.Forms.ComboBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.lblEnterCategory = new System.Windows.Forms.Label();
             this.numericUpdateFrequency = new System.Windows.Forms.NumericUpDown();
             this.lblUpdateFrequencyHour = new System.Windows.Forms.Label();
@@ -86,13 +86,13 @@
             this.txtNewName.TabIndex = 5;
             this.txtNewName.Text = "URL";
             // 
-            // cbNewCategories
+            // cbCategories
             // 
-            this.cbNewCategories.FormattingEnabled = true;
-            this.cbNewCategories.Location = new System.Drawing.Point(18, 259);
-            this.cbNewCategories.Name = "cbNewCategories";
-            this.cbNewCategories.Size = new System.Drawing.Size(231, 24);
-            this.cbNewCategories.TabIndex = 21;
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Location = new System.Drawing.Point(18, 259);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(231, 24);
+            this.cbCategories.TabIndex = 21;
             // 
             // lblEnterCategory
             // 
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 342);
-            this.Controls.Add(this.cbNewCategories);
+            this.Controls.Add(this.cbCategories);
             this.Controls.Add(this.lblEnterCategory);
             this.Controls.Add(this.numericUpdateFrequency);
             this.Controls.Add(this.lblUpdateFrequencyHour);
@@ -169,7 +169,7 @@
         private System.Windows.Forms.TextBox txtNewUrl;
         private System.Windows.Forms.Label lblNewName;
         private System.Windows.Forms.TextBox txtNewName;
-        private System.Windows.Forms.ComboBox cbNewCategories;
+        private System.Windows.Forms.ComboBox cbCategories;
         private System.Windows.Forms.Label lblEnterCategory;
         private System.Windows.Forms.NumericUpDown numericUpdateFrequency;
         private System.Windows.Forms.Label lblUpdateFrequencyHour;

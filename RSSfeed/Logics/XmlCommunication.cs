@@ -46,6 +46,39 @@ namespace Logics
             
         }
 
+        public static CategoryList loadCategory()
+        {
+            //Laddar xml-filen
+            //TODO: Om XMLfilen är tom så får man error
+            CategoryList input = new CategoryList();
+            try
+            {
+
+                var xmlDoc = XDocument.Load("Category.xml");
+
+                var category = xmlDoc.Descendants("Category");
+
+                //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
+                var catagObj = category.Select(element => new Category
+                {
+                    Name = element.Descendants("Name").Single().Value,
+                });
+
+                foreach (var aCategory in catagObj)
+                {
+                    input.addCategoryToList(aCategory.Name);
+                }
+               
+            }
+
+            catch (Exception e)
+            {
+
+                SaveListData(input, "Category.xml");
+            }
+            return input;
+        }
+
         public static void loadPodcasts(PodcastList input)
         {
             //Laddar xml-filen

@@ -84,4 +84,10 @@
     <Name>Ange namn</Name>
     <Interval>14400000</Interval>
   </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>jöjje</Url>
+    <Name>Hej</Name>
+    <Interval>3600000</Interval>
+  </Podcast>
 </ArrayOfPodcast>

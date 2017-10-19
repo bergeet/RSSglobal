@@ -15,6 +15,7 @@ namespace RSSfeed
     {
         Podcast podcast;
         PodcastList podcastList;
+        
         private int intervalMS;
 
 
@@ -22,10 +23,11 @@ namespace RSSfeed
 
         public DialogForm(Podcast aPod, PodcastList aPodList)
         {
+            InitializeComponent();
             podcastList = aPodList;
             podcast = aPod;
             load();
-            InitializeComponent();
+            
         }
 
         public void setHeader(string name)
@@ -35,11 +37,12 @@ namespace RSSfeed
 
         private void load()
         {
-            CategoryList categoryList = new CategoryList();
-            XmlCommunication.loadCategory(categoryList);
+
+            CategoryList categoryList = XmlCommunication.loadCategory();
             foreach (var item in categoryList.GetCategoryList())
             {
-                cbNewCategories.Items.Add(item);
+
+                cbCategories.Items.Add(item.Name);
             }
         }
 
@@ -47,7 +50,7 @@ namespace RSSfeed
         {
             podcast.Name = txtNewName.Text;
             podcast.Url = txtNewUrl.Text;
-            podcast.Category = (string)cbNewCategories.SelectedItem;
+            podcast.Category = (string)cbCategories.SelectedItem;
             podcast.Interval = intervalMS;
             
             XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
