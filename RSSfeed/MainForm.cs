@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -128,6 +129,29 @@ namespace RSSfeed
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Interval = intervalMS;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            
+            foreach (Podcast podcast in podcastList.GetPodcastList())
+            {
+                foreach (Episodes episode in podcast.GetEpisodes())
+                {
+                    if(episode.AvsnittsTitel == (string)lstBoxPods.SelectedItem)
+                    {
+
+                        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+
+                        wplayer.URL = episode.AvsnittsMediaUrl;
+                        wplayer.controls.play();
+
+
+                    }
+                }
+            }
+            
         }
     }
 }

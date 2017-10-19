@@ -13,11 +13,13 @@ namespace Logics
 
         public string AvsnittsTitel { get; set; }
         public string AvsnittsUrl { get; set; }
+        public string AvsnittsMediaUrl { get; set; }
 
-        public Episodes(string titel, string url)
+        public Episodes(string titel, string url, string mediaUrl)
         {
             AvsnittsTitel = titel;
             AvsnittsUrl = url;
+            AvsnittsMediaUrl = mediaUrl;
         }
 
         public string GetAvsnittsTitel()

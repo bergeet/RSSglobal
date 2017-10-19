@@ -30,8 +30,9 @@ namespace Logics
                 //Skriv ut dess titel.
                 var title = item.SelectSingleNode("title");
                 var link = item.SelectSingleNode("link");
+                var mediaUrl = item.SelectSingleNode("enclosure/@url");
 
-                Episodes ettAvsnitt = new Episodes(title.InnerText, link.InnerText);
+                Episodes ettAvsnitt = new Episodes(title.InnerText, link.InnerText, mediaUrl.InnerText);
                 episodeCollection.Add(ettAvsnitt);
             }
             return episodeCollection;

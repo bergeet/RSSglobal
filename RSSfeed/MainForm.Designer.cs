@@ -48,6 +48,7 @@
             this.btnRemoveFeed = new System.Windows.Forms.Button();
             this.btnConfigPodd = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +200,7 @@
             // 
             // btnRemoveFeed
             // 
-            this.btnRemoveFeed.Location = new System.Drawing.Point(502, 487);
+            this.btnRemoveFeed.Location = new System.Drawing.Point(593, 487);
             this.btnRemoveFeed.Name = "btnRemoveFeed";
             this.btnRemoveFeed.Size = new System.Drawing.Size(121, 28);
             this.btnRemoveFeed.TabIndex = 17;
@@ -208,7 +209,7 @@
             // 
             // btnConfigPodd
             // 
-            this.btnConfigPodd.Location = new System.Drawing.Point(357, 487);
+            this.btnConfigPodd.Location = new System.Drawing.Point(448, 487);
             this.btnConfigPodd.Name = "btnConfigPodd";
             this.btnConfigPodd.Size = new System.Drawing.Size(139, 28);
             this.btnConfigPodd.TabIndex = 18;
@@ -220,11 +221,23 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(357, 487);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 43);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "🔊";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 542);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConfigPodd);
             this.Controls.Add(this.btnRemoveFeed);
             this.Controls.Add(this.cbPods);
@@ -272,6 +285,7 @@
         private System.Windows.Forms.Button btnRemoveFeed;
         private System.Windows.Forms.Button btnConfigPodd;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

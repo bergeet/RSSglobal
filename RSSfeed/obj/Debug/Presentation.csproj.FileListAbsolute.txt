@@ -11,3 +11,8 @@ C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\Presentation.csproj.Gen
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.exe
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\RSSfeed.pdb
+C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\Interop.WMPLib.dll
+C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\Interop.WMPLib.dll
+C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\obj\Debug\Presentation.csproj.ResolveComReference.cache
