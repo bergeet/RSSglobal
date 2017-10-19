@@ -24,9 +24,21 @@ namespace RSSfeed
         public MainForm()
         {
             InitializeComponent();
+            setCategoryListOnLoad();
+            XmlCommunication.loadCategory(categoryList);
             XmlCommunication.loadPodcasts(podcastList);
 
 
+
+        }
+
+        private void setCategoryListOnLoad()
+        {
+            foreach (var item in cbNewCategories.Items)
+            {
+                categoryList.addCategoryToList(item.ToString());
+            }
+            XmlCommunication.SaveListData(categoryList.GetCategoryList(), "Category.xml");
         }
 
         private void btnAddPod_Click(object sender, EventArgs e)

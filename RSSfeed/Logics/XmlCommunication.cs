@@ -12,28 +12,38 @@ namespace Logics
     public class XmlCommunication
     {
 
-        public static void load(PodcastList input)
+
+
+        public static void loadCategory(CategoryList input)
         {
             //Laddar xml-filen
             //TODO: Om XMLfilen är tom så får man error
 
-            var xmlDoc = XDocument.Load("Podcasts.xml");
-
-            var podcasts = xmlDoc.Descendants("Podcast");
-
-            //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
-            var podObj = podcasts.Select(element => new Podcast
+            try
             {
-                Url = element.Descendants("Url").Single().Value,
-                Name = element.Descendants("Name").Single().Value,
-                Category = element.Descendants("Category").Single().Value,
-                Interval = int.Parse(element.Descendants("Interval").Single().Value)
-            });
+               
+                var xmlDoc = XDocument.Load("Category.xml");
 
-            foreach (var aPod in podObj)
-            {
-                input.AddPod(aPod);
+                var category = xmlDoc.Descendants("Category");
+
+                //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
+                var catagObj = category.Select(element => new Category
+                {
+                    Name = element.Descendants("Name").Single().Value,
+                });
+
+                foreach (var aCategory in catagObj)
+                {
+                    input.addCategoryToList(aCategory.ToString());
+                }
             }
+
+            catch (Exception e)
+            {
+
+                SaveListData(input, "Category.xml");
+            }
+            
         }
 
         public static void loadPodcasts(PodcastList input)
