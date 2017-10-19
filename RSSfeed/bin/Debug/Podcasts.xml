@@ -84,10 +84,4 @@
     <Name>Ange namn</Name>
     <Interval>14400000</Interval>
   </Podcast>
-  <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Penispump</Url>
-    <Name>Penispump</Name>
-    <Interval>3600000</Interval>
-  </Podcast>
 </ArrayOfPodcast>

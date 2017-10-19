@@ -33,7 +33,6 @@
             this.txtNewUrl = new System.Windows.Forms.TextBox();
             this.lblNewName = new System.Windows.Forms.Label();
             this.txtNewName = new System.Windows.Forms.TextBox();
-            this.btnNewCategory = new System.Windows.Forms.Button();
             this.cbNewCategories = new System.Windows.Forms.ComboBox();
             this.lblEnterCategory = new System.Windows.Forms.Label();
             this.numericUpdateFrequency = new System.Windows.Forms.NumericUpDown();
@@ -87,21 +86,12 @@
             this.txtNewName.TabIndex = 5;
             this.txtNewName.Text = "URL";
             // 
-            // btnNewCategory
-            // 
-            this.btnNewCategory.Location = new System.Drawing.Point(229, 260);
-            this.btnNewCategory.Name = "btnNewCategory";
-            this.btnNewCategory.Size = new System.Drawing.Size(102, 23);
-            this.btnNewCategory.TabIndex = 22;
-            this.btnNewCategory.Text = "Ny kategori";
-            this.btnNewCategory.UseVisualStyleBackColor = true;
-            // 
             // cbNewCategories
             // 
             this.cbNewCategories.FormattingEnabled = true;
             this.cbNewCategories.Location = new System.Drawing.Point(18, 259);
             this.cbNewCategories.Name = "cbNewCategories";
-            this.cbNewCategories.Size = new System.Drawing.Size(205, 24);
+            this.cbNewCategories.Size = new System.Drawing.Size(231, 24);
             this.cbNewCategories.TabIndex = 21;
             // 
             // lblEnterCategory
@@ -119,6 +109,7 @@
             this.numericUpdateFrequency.Name = "numericUpdateFrequency";
             this.numericUpdateFrequency.Size = new System.Drawing.Size(48, 22);
             this.numericUpdateFrequency.TabIndex = 17;
+            this.numericUpdateFrequency.ValueChanged += new System.EventHandler(this.numericUpdateFrequency_ValueChanged);
             // 
             // lblUpdateFrequencyHour
             // 
@@ -146,13 +137,13 @@
             this.btnAddPod.TabIndex = 14;
             this.btnAddPod.Text = "Submit";
             this.btnAddPod.UseVisualStyleBackColor = true;
+            this.btnAddPod.Click += new System.EventHandler(this.btnAddPod_Click);
             // 
             // DialogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 342);
-            this.Controls.Add(this.btnNewCategory);
             this.Controls.Add(this.cbNewCategories);
             this.Controls.Add(this.lblEnterCategory);
             this.Controls.Add(this.numericUpdateFrequency);
@@ -178,7 +169,6 @@
         private System.Windows.Forms.TextBox txtNewUrl;
         private System.Windows.Forms.Label lblNewName;
         private System.Windows.Forms.TextBox txtNewName;
-        private System.Windows.Forms.Button btnNewCategory;
         private System.Windows.Forms.ComboBox cbNewCategories;
         private System.Windows.Forms.Label lblEnterCategory;
         private System.Windows.Forms.NumericUpDown numericUpdateFrequency;

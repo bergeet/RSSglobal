@@ -212,6 +212,7 @@
             this.btnConfigPodd.TabIndex = 18;
             this.btnConfigPodd.Text = "Konfigurera podd";
             this.btnConfigPodd.UseVisualStyleBackColor = true;
+            this.btnConfigPodd.Click += new System.EventHandler(this.btnConfigPodd_Click);
             // 
             // MainForm
             // 

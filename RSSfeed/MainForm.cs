@@ -92,5 +92,23 @@ namespace RSSfeed
         {
             
         }
+
+        private void btnConfigPodd_Click(object sender, EventArgs e)
+        {
+            var selectedInput = (string)cbPods.SelectedItem;
+            Podcast aPod = new Podcast();
+            foreach (var entry in podcastList.GetPodcastList())
+            {
+                if(entry.Name == selectedInput)
+                {
+                    aPod = entry;
+                }
+                
+            }
+            
+            DialogForm dialogForm = new DialogForm(aPod, podcastList);
+            dialogForm.setHeader(aPod.Name);
+            dialogForm.Show();
+        }
     }
 }
