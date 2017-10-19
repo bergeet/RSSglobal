@@ -175,6 +175,7 @@
             this.cbCategories.Name = "cbCategories";
             this.cbCategories.Size = new System.Drawing.Size(121, 24);
             this.cbCategories.TabIndex = 14;
+            this.cbCategories.SelectedIndexChanged += new System.EventHandler(this.cbCategories_SelectedIndexChanged);
             // 
             // lblPods
             // 
@@ -192,6 +193,7 @@
             this.cbPods.Name = "cbPods";
             this.cbPods.Size = new System.Drawing.Size(121, 24);
             this.cbPods.TabIndex = 16;
+            this.cbPods.SelectedIndexChanged += new System.EventHandler(this.cbPods_SelectedIndexChanged);
             // 
             // btnRemoveFeed
             // 

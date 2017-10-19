@@ -72,4 +72,22 @@
     <Name>Ange namn</Name>
     <Interval>0</Interval>
   </Podcast>
+  <Podcast>
+    <Category>Hälsa</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>7200000</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>14400000</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>Penispump</Url>
+    <Name>Penispump</Name>
+    <Interval>3600000</Interval>
+  </Podcast>
 </ArrayOfPodcast>

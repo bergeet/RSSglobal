@@ -38,6 +38,7 @@ namespace RSSfeed
             foreach (var item in cbNewCategories.Items)
             {
                 categoryList.addCategoryToList(item.ToString());
+                cbCategories.Items.Add(item.ToString());
             }
             XmlCommunication.SaveListData(categoryList.GetCategoryList(), "Category.xml");
         }
@@ -57,13 +58,9 @@ namespace RSSfeed
             {
                 categoryList.addCategoryToList(item.ToString());
             }
-
-
-           
-
+       
             XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
-            // Xml.SaveListData(categoryList.GetCategoryList(), "Podcasts.xml");
-
+            // Xml.SaveListData(categoryList.GetCategoryList(), "Podcasts.xml")
 
         }
 
@@ -77,6 +74,23 @@ namespace RSSfeed
         {
             int outcome = (int)numericUpdateFrequency.Value;
             intervalMS = TimeConverter.hourToMS(outcome);
+        }
+
+        private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbPods.Items.Clear();
+            foreach (Podcast podcast in podcastList.GetPodcastList())
+            {
+                if(podcast.Category == (string)cbCategories.SelectedItem)
+                {
+                    cbPods.Items.Add(podcast.Name);
+                }
+            }
+        }
+
+        private void cbPods_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logics
 {
-    class Episodes
+    public class Episodes
     {
         private string episodeTitle = null;
         private string episodeUrl = null;
