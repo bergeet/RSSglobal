@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\RSSfeed",
-    "\\RSSfeed\\obj\\Debug",
-    "\\RSSfeed\\obj\\Debug\\TempPE",
-    "\\RSSfeed\\obj\\Release"
+    "\\RSSfeed"
   ],
-  "SelectedNode": "\\RSSfeed\\Form1.Designer.cs",
+  "SelectedNode": "\\RSSfeed\\MainForm.cs",
   "PreviewInSolutionExplorer": true
 }

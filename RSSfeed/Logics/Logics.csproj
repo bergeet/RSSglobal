@@ -43,6 +43,7 @@
     <Compile Include="CategorizeEntries.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="CategoryList.cs" />
+    <Compile Include="Episodes.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="PodcastList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
