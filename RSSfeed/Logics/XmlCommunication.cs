@@ -83,24 +83,33 @@ namespace Logics
         {
             //Laddar xml-filen
             //TODO: Om XMLfilen är tom så får man error
-           
-            var xmlDoc = XDocument.Load("Podcasts.xml");
-            
-            var podcasts = xmlDoc.Descendants("Podcast");
 
-            //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
-            var podObj = podcasts.Select(element => new Podcast
+            try
             {
-                Url = element.Descendants("Url").Single().Value,
-                Name = element.Descendants("Name").Single().Value,
-                Category = element.Descendants("Category").Single().Value,
-                Interval = int.Parse(element.Descendants("Interval").Single().Value)
-            });
+                var xmlDoc = XDocument.Load("Podcasts.xml");
 
-            foreach (var aPod in podObj)
-            {
-                input.AddPod(aPod);
+                var podcasts = xmlDoc.Descendants("Podcast");
+
+                //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
+                var podObj = podcasts.Select(element => new Podcast
+                {
+                    Url = element.Descendants("Url").Single().Value,
+                    Name = element.Descendants("Name").Single().Value,
+                    Category = element.Descendants("Category").Single().Value,
+                    Interval = int.Parse(element.Descendants("Interval").Single().Value)
+                });
+
+                foreach (var aPod in podObj)
+                {
+                    input.AddPod(aPod);
+                }
             }
+            catch (Exception)
+            {
+
+                
+            }
+           
         }
 
         public static void SaveListData(object obj, string filename)
@@ -113,9 +122,8 @@ namespace Logics
             }
         }
 
-        
 
-     
+
 
 
 

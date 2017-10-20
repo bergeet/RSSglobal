@@ -22,6 +22,10 @@ namespace RSSfeed
         PodcastList podcastList = new PodcastList();
         CategoryList categoryList = new CategoryList();
         int intervalMS;
+        bool currentlyPlaying = false;
+        bool podInitialized = false;
+        string currentlyPlayingPod = "";
+        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
 
         public MainForm()
         {
@@ -55,7 +59,7 @@ namespace RSSfeed
                 categoryList.addCategoryToList(item.ToString());
             }
        
-            XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
+            XmlCommunication.SaveListData(podcastList.GetPodcastList(), "pods.xml");
             fillCbCategories(); //Ändra staten av comboboxen kategori
 
 
@@ -137,21 +141,53 @@ namespace RSSfeed
             
             foreach (Podcast podcast in podcastList.GetPodcastList())
             {
-                foreach (Episodes episode in podcast.GetEpisodes())
+                if(currentlyPlayingPod != (string)lstBoxPods.SelectedItem)
                 {
-                    if(episode.AvsnittsTitel == (string)lstBoxPods.SelectedItem)
+                    podInitialized = false;
+                }
+                if (!podInitialized)
+                {
+                    foreach (Episodes episode in podcast.GetEpisodes())
                     {
+                        if (episode.AvsnittsTitel == (string)lstBoxPods.SelectedItem)
+                        {
+                            wplayer.URL = episode.AvsnittsMediaUrl;
+                            currentlyPlayingPod = episode.AvsnittsTitel;
+                            if (!currentlyPlaying)
+                            {
+                                podInitialized = true;
+                                currentlyPlaying = true;
+                                wplayer.controls.play();
+                            }
+                            else
+                            {
+                                wplayer.controls.pause();
+                                currentlyPlaying = false;
+                            }
 
-                        WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-
-                        wplayer.URL = episode.AvsnittsMediaUrl;
+                        }
+                    }
+                }
+                else
+                {
+                    if (!currentlyPlaying)
+                    {
                         wplayer.controls.play();
-
-
+                        currentlyPlaying = true;
+                    }
+                    else
+                    {
+                        wplayer.controls.pause();
+                        currentlyPlaying = false;
                     }
                 }
             }
             
+        }
+
+        private void tbVolume_Scroll(object sender, EventArgs e)
+        {
+            wplayer.settings.volume = tbVolume.Value;
         }
     }
 }

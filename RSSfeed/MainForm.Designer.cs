@@ -49,7 +49,9 @@
             this.btnConfigPodd = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.tbVolume = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             this.SuspendLayout();
             // 
             // lstBoxPods
@@ -228,15 +230,30 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 43);
             this.button1.TabIndex = 19;
-            this.button1.Text = "🔊";
+            this.button1.Text = "⏯";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tbVolume
+            // 
+            this.tbVolume.Location = new System.Drawing.Point(295, 377);
+            this.tbVolume.Maximum = 100;
+            this.tbVolume.Name = "tbVolume";
+            this.tbVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.tbVolume.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbVolume.RightToLeftLayout = true;
+            this.tbVolume.Size = new System.Drawing.Size(56, 104);
+            this.tbVolume.TabIndex = 20;
+            this.tbVolume.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.tbVolume.Value = 100;
+            this.tbVolume.Scroll += new System.EventHandler(this.tbVolume_Scroll);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 542);
+            this.Controls.Add(this.tbVolume);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConfigPodd);
             this.Controls.Add(this.btnRemoveFeed);
@@ -259,6 +276,7 @@
             this.Name = "MainForm";
             this.Text = "iRSS-LäsarN";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +304,7 @@
         private System.Windows.Forms.Button btnConfigPodd;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar tbVolume;
     }
 }
 
