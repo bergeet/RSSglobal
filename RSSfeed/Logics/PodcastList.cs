@@ -42,6 +42,10 @@ namespace Logics
             }
 
         }
+        public void RemovePostcast(int i)
+        {
+            podcastList.RemoveAt(i);
+        }
         
     }
 }

@@ -19,9 +19,9 @@
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
-    <Category>Hälsa</Category>
-    <Url>https://rss.acast.com/varvet</Url>
-    <Name>Värvet</Name>
-    <Interval>0</Interval>
+    <Category>Dokumentär</Category>
+    <Url>Ange url</Url>
+    <Name>Ange namn</Name>
+    <Interval>3600000</Interval>
   </Podcast>
 </ArrayOfPodcast>

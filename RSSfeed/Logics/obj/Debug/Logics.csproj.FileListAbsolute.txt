@@ -6,3 +6,11 @@ C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\Logics\obj\Debug\Logics.csprojRes
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\Logics\obj\Debug\Logics.csproj.CoreCompileInputs.cache
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\Logics\obj\Debug\Logics.dll
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\Logics\obj\Debug\Logics.pdb
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\bin\Debug\Logics.dll
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\bin\Debug\Logics.pdb
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\bin\Debug\DataAccess.dll
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\bin\Debug\DataAccess.pdb
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\obj\Debug\Logics.csprojResolveAssemblyReference.cache
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\obj\Debug\Logics.csproj.CoreCompileInputs.cache
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\obj\Debug\Logics.dll
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\Logics\obj\Debug\Logics.pdb

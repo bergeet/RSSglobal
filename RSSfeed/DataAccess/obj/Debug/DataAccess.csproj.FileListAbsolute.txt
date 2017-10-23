@@ -4,3 +4,9 @@ C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\DataAccess\obj\Debug\DataAccess.c
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Elliot\source\repos\RSSglobal\RSSfeed\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\wicto\Source\Repos\RSSglobal6\RSSfeed\DataAccess\obj\Debug\DataAccess.pdb

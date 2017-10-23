@@ -15,7 +15,7 @@ namespace RSSfeed
     {
         Podcast podcast;
         PodcastList podcastList;
-        
+
         private int intervalMS;
 
         public DialogForm(Podcast aPod, PodcastList aPodList)
@@ -54,9 +54,21 @@ namespace RSSfeed
             podcast.Url = txtNewUrl.Text;
             podcast.Category = (string)cbCategories.SelectedItem;
             podcast.Interval = intervalMS;
-            
-            XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
+            try
+            {
+                Validation.checkIfEmpty(podcast.Interval);
+                Validation.checkIfEmpty(podcast.Name);
+                Validation.checkIfNull(podcast.Category);
+                Validation.checkIfEmpty(podcast.Url);
 
+                XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
+                MessageBox.Show("Ändringen är nu klar! :)");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void numericUpdateFrequency_ValueChanged(object sender, EventArgs e)
