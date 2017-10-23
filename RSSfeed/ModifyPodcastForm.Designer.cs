@@ -1,6 +1,6 @@
 ﻿namespace RSSfeed
 {
-    partial class DialogForm
+    partial class ModifyPodcastForm
     {
         /// <summary>
         /// Required designer variable.

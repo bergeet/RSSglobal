@@ -8,7 +8,7 @@ namespace Logics
 {
     public class TimeConverter
     {
-       
+
 
         public static int hourToMS(int input)
         {

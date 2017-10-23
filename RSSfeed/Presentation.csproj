@@ -46,11 +46,17 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DialogForm.cs">
+    <Compile Include="RenameCategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DialogForm.Designer.cs">
-      <DependentUpon>DialogForm.cs</DependentUpon>
+    <Compile Include="RenameCategoryForm.Designer.cs">
+      <DependentUpon>RenameCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyPodcastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyPodcastForm.Designer.cs">
+      <DependentUpon>ModifyPodcastForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DialogForm.resx">
-      <DependentUpon>DialogForm.cs</DependentUpon>
+    <EmbeddedResource Include="RenameCategoryForm.resx">
+      <DependentUpon>RenameCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPodcastForm.resx">
+      <DependentUpon>ModifyPodcastForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

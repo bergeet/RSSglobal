@@ -32,13 +32,14 @@ namespace Logics
                 var link = item.SelectSingleNode("link");
                 var mediaUrl = item.SelectSingleNode("enclosure/@url");
 
+
                 Episodes ettAvsnitt = new Episodes(title.InnerText, link.InnerText, mediaUrl.InnerText);
                 episodeCollection.Add(ettAvsnitt);
             }
             return episodeCollection;
         }
-            
-        
+
+
 
     }
 }

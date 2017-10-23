@@ -10,6 +10,7 @@ namespace Logics
     {
         private string episodeTitle = null;
         private string episodeUrl = null;
+        private bool isPlayed = false;
 
         public string AvsnittsTitel { get; set; }
         public string AvsnittsUrl { get; set; }
@@ -22,6 +23,16 @@ namespace Logics
             AvsnittsMediaUrl = mediaUrl;
         }
 
+        public bool getStatus()
+        {
+            return isPlayed;
+        }
+
+        public void setStatus(bool status)
+        {
+            isPlayed = status;
+        }
+
         public string GetAvsnittsTitel()
         {
             return episodeTitle;
@@ -31,6 +42,6 @@ namespace Logics
             return episodeUrl;
         }
 
-        
+
     }
 }
