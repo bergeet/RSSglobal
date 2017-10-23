@@ -18,4 +18,28 @@
     <Name>Olof Lundh</Name>
     <Interval>0</Interval>
   </Podcast>
+  <Podcast>
+    <Category>Sport</Category>
+    <Url>http://tackforkaffet.libsyn.com/rss</Url>
+    <Name>tfk</Name>
+    <Interval>3600000</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>http://tackforkaffet.libsyn.com/rss</Url>
+    <Name>Tacj</Name>
+    <Interval>7200000</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>https://rss.acast.com/varvet</Url>
+    <Name>Värvet</Name>
+    <Interval>3600000</Interval>
+  </Podcast>
+  <Podcast>
+    <Category>Dokumentär</Category>
+    <Url>https://rss.acast.com/varvet</Url>
+    <Name>Värvish</Name>
+    <Interval>7200000</Interval>
+  </Podcast>
 </ArrayOfPodcast>

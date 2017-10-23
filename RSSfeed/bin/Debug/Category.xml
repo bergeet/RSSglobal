@@ -4,9 +4,21 @@
     <Name>Sport</Name>
   </Category>
   <Category>
+    <Name>TEmplate</Name>
+  </Category>
+  <Category>
+    <Name>hej</Name>
+  </Category>
+  <Category>
     <Name>Dokumentär</Name>
   </Category>
   <Category>
     <Name>Hälsa</Name>
+  </Category>
+  <Category>
+    <Name>Tre</Name>
+  </Category>
+  <Category>
+    <Name>Fittsync</Name>
   </Category>
 </ArrayOfCategory>

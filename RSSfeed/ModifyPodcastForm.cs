@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace RSSfeed
 {
-    internal partial class DialogForm : Form
+    internal partial class ModifyPodcastForm : Form
     {
         Podcast podcast;
         PodcastList podcastList;
 
         private int intervalMS;
 
-        public DialogForm(Podcast aPod, PodcastList aPodList)
+        public ModifyPodcastForm(Podcast aPod, PodcastList aPodList)
         {
             InitializeComponent();
             podcastList = aPodList;
@@ -40,7 +40,7 @@ namespace RSSfeed
         private void load()
         {
 
-            CategoryList categoryList = XmlCommunication.loadCategory();
+            CategoryList categoryList = XmlCommunication.LoadCategory();
             foreach (var item in categoryList.GetCategoryList())
             {
 

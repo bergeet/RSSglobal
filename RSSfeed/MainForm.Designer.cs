@@ -52,6 +52,7 @@
             this.tbVolume = new System.Windows.Forms.TrackBar();
             this.lblVolym = new System.Windows.Forms.Label();
             this.lblStartStop = new System.Windows.Forms.Label();
+            this.btnShowMore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbVolume)).BeginInit();
             this.SuspendLayout();
@@ -59,48 +60,47 @@
             // lstBoxPods
             // 
             this.lstBoxPods.FormattingEnabled = true;
-            this.lstBoxPods.Location = new System.Drawing.Point(270, 52);
-            this.lstBoxPods.Margin = new System.Windows.Forms.Padding(2);
+            this.lstBoxPods.ItemHeight = 16;
+            this.lstBoxPods.Location = new System.Drawing.Point(360, 64);
+            this.lstBoxPods.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstBoxPods.Name = "lstBoxPods";
-            this.lstBoxPods.Size = new System.Drawing.Size(269, 342);
+            this.lstBoxPods.Size = new System.Drawing.Size(357, 388);
             this.lstBoxPods.TabIndex = 0;
             // 
             // lblCategories
             // 
             this.lblCategories.AutoSize = true;
-            this.lblCategories.Location = new System.Drawing.Point(266, 7);
-            this.lblCategories.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategories.Location = new System.Drawing.Point(355, 9);
             this.lblCategories.Name = "lblCategories";
-            this.lblCategories.Size = new System.Drawing.Size(46, 13);
+            this.lblCategories.Size = new System.Drawing.Size(61, 17);
             this.lblCategories.TabIndex = 1;
             this.lblCategories.Text = "Kategori";
             // 
             // lblAddPod
             // 
             this.lblAddPod.AutoSize = true;
-            this.lblAddPod.Location = new System.Drawing.Point(9, 7);
-            this.lblAddPod.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAddPod.Location = new System.Drawing.Point(12, 9);
             this.lblAddPod.Name = "lblAddPod";
-            this.lblAddPod.Size = new System.Drawing.Size(154, 13);
+            this.lblAddPod.Size = new System.Drawing.Size(205, 17);
             this.lblAddPod.TabIndex = 2;
             this.lblAddPod.Text = "Lägg till ny podcast (RSS-URL)";
             // 
             // txtAddPod
             // 
-            this.txtAddPod.Location = new System.Drawing.Point(11, 24);
-            this.txtAddPod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAddPod.Location = new System.Drawing.Point(15, 30);
+            this.txtAddPod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddPod.Name = "txtAddPod";
-            this.txtAddPod.Size = new System.Drawing.Size(152, 20);
+            this.txtAddPod.Size = new System.Drawing.Size(201, 22);
             this.txtAddPod.TabIndex = 3;
             this.txtAddPod.Text = "Ange url";
             this.txtAddPod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddPod_MouseClick);
             // 
             // btnAddPod
             // 
-            this.btnAddPod.Location = new System.Drawing.Point(9, 193);
-            this.btnAddPod.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddPod.Location = new System.Drawing.Point(12, 238);
+            this.btnAddPod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddPod.Name = "btnAddPod";
-            this.btnAddPod.Size = new System.Drawing.Size(56, 19);
+            this.btnAddPod.Size = new System.Drawing.Size(75, 23);
             this.btnAddPod.TabIndex = 4;
             this.btnAddPod.Text = "Submit";
             this.btnAddPod.UseVisualStyleBackColor = true;
@@ -109,48 +109,45 @@
             // lblUpdateFrequency
             // 
             this.lblUpdateFrequency.AutoSize = true;
-            this.lblUpdateFrequency.Location = new System.Drawing.Point(9, 52);
-            this.lblUpdateFrequency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateFrequency.Location = new System.Drawing.Point(12, 64);
             this.lblUpdateFrequency.Name = "lblUpdateFrequency";
-            this.lblUpdateFrequency.Size = new System.Drawing.Size(181, 13);
+            this.lblUpdateFrequency.Size = new System.Drawing.Size(242, 17);
             this.lblUpdateFrequency.TabIndex = 5;
             this.lblUpdateFrequency.Text = "Välj hur ofta podden ska uppdateras.";
             // 
             // lblUpdateFrequencyHour
             // 
             this.lblUpdateFrequencyHour.AutoSize = true;
-            this.lblUpdateFrequencyHour.Location = new System.Drawing.Point(52, 70);
-            this.lblUpdateFrequencyHour.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUpdateFrequencyHour.Location = new System.Drawing.Point(69, 86);
             this.lblUpdateFrequencyHour.Name = "lblUpdateFrequencyHour";
-            this.lblUpdateFrequencyHour.Size = new System.Drawing.Size(40, 13);
+            this.lblUpdateFrequencyHour.Size = new System.Drawing.Size(54, 17);
             this.lblUpdateFrequencyHour.TabIndex = 7;
             this.lblUpdateFrequencyHour.Text = "timmar.";
             // 
             // numericUpdateFrequency
             // 
-            this.numericUpdateFrequency.Location = new System.Drawing.Point(11, 68);
-            this.numericUpdateFrequency.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpdateFrequency.Location = new System.Drawing.Point(15, 84);
+            this.numericUpdateFrequency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpdateFrequency.Name = "numericUpdateFrequency";
-            this.numericUpdateFrequency.Size = new System.Drawing.Size(36, 20);
+            this.numericUpdateFrequency.Size = new System.Drawing.Size(48, 22);
             this.numericUpdateFrequency.TabIndex = 8;
             this.numericUpdateFrequency.ValueChanged += new System.EventHandler(this.numericUpdateFrequency_ValueChanged);
             // 
             // lblEnterName
             // 
             this.lblEnterName.AutoSize = true;
-            this.lblEnterName.Location = new System.Drawing.Point(9, 96);
-            this.lblEnterName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEnterName.Location = new System.Drawing.Point(12, 118);
             this.lblEnterName.Name = "lblEnterName";
-            this.lblEnterName.Size = new System.Drawing.Size(90, 13);
+            this.lblEnterName.Size = new System.Drawing.Size(119, 17);
             this.lblEnterName.TabIndex = 9;
             this.lblEnterName.Text = "Namnge ditt flöde";
             // 
             // txtEnterName
             // 
-            this.txtEnterName.Location = new System.Drawing.Point(9, 112);
-            this.txtEnterName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEnterName.Location = new System.Drawing.Point(12, 138);
+            this.txtEnterName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEnterName.Name = "txtEnterName";
-            this.txtEnterName.Size = new System.Drawing.Size(152, 20);
+            this.txtEnterName.Size = new System.Drawing.Size(201, 22);
             this.txtEnterName.TabIndex = 10;
             this.txtEnterName.Text = "Ange namn";
             this.txtEnterName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEnterName_MouseClick);
@@ -158,73 +155,68 @@
             // lblEnterCategory
             // 
             this.lblEnterCategory.AutoSize = true;
-            this.lblEnterCategory.Location = new System.Drawing.Point(9, 145);
-            this.lblEnterCategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEnterCategory.Location = new System.Drawing.Point(12, 178);
             this.lblEnterCategory.Name = "lblEnterCategory";
-            this.lblEnterCategory.Size = new System.Drawing.Size(73, 13);
+            this.lblEnterCategory.Size = new System.Drawing.Size(96, 17);
             this.lblEnterCategory.TabIndex = 11;
             this.lblEnterCategory.Text = "Ange kategori";
             // 
             // cbNewCategories
             // 
             this.cbNewCategories.FormattingEnabled = true;
-            this.cbNewCategories.Items.AddRange(new object[] {
-            "Sport",
-            "Dokumentär",
-            "Hälsa"});
-            this.cbNewCategories.Location = new System.Drawing.Point(9, 162);
-            this.cbNewCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNewCategories.Location = new System.Drawing.Point(12, 199);
+            this.cbNewCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNewCategories.Name = "cbNewCategories";
-            this.cbNewCategories.Size = new System.Drawing.Size(155, 21);
+            this.cbNewCategories.Size = new System.Drawing.Size(205, 24);
             this.cbNewCategories.TabIndex = 12;
+            this.cbNewCategories.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbNewCategories_MouseClick);
             // 
             // btnNewCategory
             // 
-            this.btnNewCategory.Location = new System.Drawing.Point(167, 162);
-            this.btnNewCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNewCategory.Location = new System.Drawing.Point(223, 199);
+            this.btnNewCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNewCategory.Name = "btnNewCategory";
-            this.btnNewCategory.Size = new System.Drawing.Size(76, 19);
+            this.btnNewCategory.Size = new System.Drawing.Size(101, 23);
             this.btnNewCategory.TabIndex = 13;
-            this.btnNewCategory.Text = "Ny kategori";
+            this.btnNewCategory.Text = "Konfigurera";
             this.btnNewCategory.UseVisualStyleBackColor = true;
             this.btnNewCategory.Click += new System.EventHandler(this.btnNewCategory_Click);
             // 
             // cbCategories
             // 
             this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(268, 24);
-            this.cbCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategories.Location = new System.Drawing.Point(357, 30);
+            this.cbCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(92, 21);
+            this.cbCategories.Size = new System.Drawing.Size(121, 24);
             this.cbCategories.TabIndex = 14;
             this.cbCategories.SelectedIndexChanged += new System.EventHandler(this.cbCategories_SelectedIndexChanged);
             // 
             // lblPods
             // 
             this.lblPods.AutoSize = true;
-            this.lblPods.Location = new System.Drawing.Point(442, 9);
-            this.lblPods.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPods.Location = new System.Drawing.Point(589, 11);
             this.lblPods.Name = "lblPods";
-            this.lblPods.Size = new System.Drawing.Size(51, 13);
+            this.lblPods.Size = new System.Drawing.Size(67, 17);
             this.lblPods.TabIndex = 15;
             this.lblPods.Text = "Välj podd";
             // 
             // cbPods
             // 
             this.cbPods.FormattingEnabled = true;
-            this.cbPods.Location = new System.Drawing.Point(445, 25);
-            this.cbPods.Margin = new System.Windows.Forms.Padding(2);
+            this.cbPods.Location = new System.Drawing.Point(593, 31);
+            this.cbPods.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbPods.Name = "cbPods";
-            this.cbPods.Size = new System.Drawing.Size(92, 21);
+            this.cbPods.Size = new System.Drawing.Size(121, 24);
             this.cbPods.TabIndex = 16;
             this.cbPods.SelectedIndexChanged += new System.EventHandler(this.cbPods_SelectedIndexChanged);
             // 
             // btnRemoveFeed
             // 
-            this.btnRemoveFeed.Location = new System.Drawing.Point(445, 396);
-            this.btnRemoveFeed.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveFeed.Location = new System.Drawing.Point(605, 457);
+            this.btnRemoveFeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFeed.Name = "btnRemoveFeed";
-            this.btnRemoveFeed.Size = new System.Drawing.Size(91, 23);
+            this.btnRemoveFeed.Size = new System.Drawing.Size(121, 28);
             this.btnRemoveFeed.TabIndex = 17;
             this.btnRemoveFeed.Text = "Ta bort podfeed";
             this.btnRemoveFeed.UseVisualStyleBackColor = true;
@@ -232,10 +224,10 @@
             // 
             // btnConfigPodd
             // 
-            this.btnConfigPodd.Location = new System.Drawing.Point(336, 396);
-            this.btnConfigPodd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfigPodd.Location = new System.Drawing.Point(460, 457);
+            this.btnConfigPodd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfigPodd.Name = "btnConfigPodd";
-            this.btnConfigPodd.Size = new System.Drawing.Size(104, 23);
+            this.btnConfigPodd.Size = new System.Drawing.Size(139, 28);
             this.btnConfigPodd.TabIndex = 18;
             this.btnConfigPodd.Text = "Konfigurera podd";
             this.btnConfigPodd.UseVisualStyleBackColor = true;
@@ -248,10 +240,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(268, 396);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(361, 457);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 35);
+            this.button1.Size = new System.Drawing.Size(63, 43);
             this.button1.TabIndex = 19;
             this.button1.Text = "⏯";
             this.button1.UseVisualStyleBackColor = true;
@@ -259,14 +251,14 @@
             // 
             // tbVolume
             // 
-            this.tbVolume.Location = new System.Drawing.Point(221, 306);
-            this.tbVolume.Margin = new System.Windows.Forms.Padding(2);
+            this.tbVolume.Location = new System.Drawing.Point(295, 377);
+            this.tbVolume.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbVolume.Maximum = 100;
             this.tbVolume.Name = "tbVolume";
             this.tbVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tbVolume.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbVolume.RightToLeftLayout = true;
-            this.tbVolume.Size = new System.Drawing.Size(45, 84);
+            this.tbVolume.Size = new System.Drawing.Size(56, 103);
             this.tbVolume.TabIndex = 20;
             this.tbVolume.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.tbVolume.Value = 100;
@@ -275,26 +267,39 @@
             // lblVolym
             // 
             this.lblVolym.AutoSize = true;
-            this.lblVolym.Location = new System.Drawing.Point(218, 291);
+            this.lblVolym.Location = new System.Drawing.Point(291, 358);
+            this.lblVolym.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVolym.Name = "lblVolym";
-            this.lblVolym.Size = new System.Drawing.Size(35, 13);
+            this.lblVolym.Size = new System.Drawing.Size(46, 17);
             this.lblVolym.TabIndex = 21;
             this.lblVolym.Text = "Volym";
             // 
             // lblStartStop
             // 
             this.lblStartStop.AutoSize = true;
-            this.lblStartStop.Location = new System.Drawing.Point(265, 433);
+            this.lblStartStop.Location = new System.Drawing.Point(358, 502);
+            this.lblStartStop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartStop.Name = "lblStartStop";
-            this.lblStartStop.Size = new System.Drawing.Size(56, 13);
+            this.lblStartStop.Size = new System.Drawing.Size(71, 17);
             this.lblStartStop.TabIndex = 22;
             this.lblStartStop.Text = "Start/Stop";
             // 
+            // btnShowMore
+            // 
+            this.btnShowMore.Location = new System.Drawing.Point(460, 490);
+            this.btnShowMore.Name = "btnShowMore";
+            this.btnShowMore.Size = new System.Drawing.Size(151, 25);
+            this.btnShowMore.TabIndex = 23;
+            this.btnShowMore.Text = "Visa mer om avsnitt";
+            this.btnShowMore.UseVisualStyleBackColor = true;
+            this.btnShowMore.Click += new System.EventHandler(this.btnShowMore_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 450);
+            this.ClientSize = new System.Drawing.Size(720, 531);
+            this.Controls.Add(this.btnShowMore);
             this.Controls.Add(this.lblStartStop);
             this.Controls.Add(this.lblVolym);
             this.Controls.Add(this.tbVolume);
@@ -317,7 +322,7 @@
             this.Controls.Add(this.lblAddPod);
             this.Controls.Add(this.lblCategories);
             this.Controls.Add(this.lstBoxPods);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "iRSS-LäsarN";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
@@ -352,6 +357,7 @@
         private System.Windows.Forms.TrackBar tbVolume;
         private System.Windows.Forms.Label lblVolym;
         private System.Windows.Forms.Label lblStartStop;
+        private System.Windows.Forms.Button btnShowMore;
     }
 }
 

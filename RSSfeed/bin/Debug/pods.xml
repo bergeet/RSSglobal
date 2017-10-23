@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Podcast>
-    <Category>Dokumentär</Category>
+    <Category>Sport</Category>
     <Url>https://rss.acast.com/filipandfredrik</Url>
     <Name>Filip &amp; Fredrik</Name>
-    <Interval>0</Interval>
+    <Interval>3600000</Interval>
   </Podcast>
   <Podcast>
     <Category>Dokumentär</Category>
@@ -13,14 +13,14 @@
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
-    <Category>Sport</Category>
+    <Category>Dokumentär</Category>
     <Url>https://rss.acast.com/lundh</Url>
-    <Name>Olof Lundhs</Name>
+    <Name>Olof Lundh</Name>
     <Interval>0</Interval>
   </Podcast>
   <Podcast>
-    <Category>Dokumentär</Category>
-    <Url>Ange url</Url>
+    <Category>Sport</Category>
+    <Url>http://tackforkaffet.libsyn.com/rss</Url>
     <Name>Ange namn</Name>
     <Interval>3600000</Interval>
   </Podcast>

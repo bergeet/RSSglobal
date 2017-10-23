@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -30,19 +31,24 @@ namespace RSSfeed
         public MainForm()
         {
             InitializeComponent();
-            setCategoryListOnLoad();
-            XmlCommunication.loadCategory(categoryList);
+
+            categoryList = XmlCommunication.LoadCategory();
+
             XmlCommunication.loadPodcasts(podcastList);
+            setCategoryListOnLoad();
+
         }
 
         private void setCategoryListOnLoad()
         {
-            foreach (var item in cbNewCategories.Items)
+            foreach (var category in categoryList.GetCategoryList())
             {
-                categoryList.addCategoryToList(item.ToString());
-                cbCategories.Items.Add(item.ToString());
+                cbNewCategories.Items.Add(category.Name);
+                cbCategories.Items.Add(category.Name);
             }
-            XmlCommunication.SaveListData(categoryList.GetCategoryList(), "Category.xml");
+
+          
+            //XmlCommunication.SaveListData(categoryList.GetCategoryList(), "Category.xml");
         }
 
         private void btnAddPod_Click(object sender, EventArgs e)
@@ -68,7 +74,7 @@ namespace RSSfeed
                         categoryList.addCategoryToList(item.ToString());
                     }
 
-                    XmlCommunication.SaveListData(podcastList.GetPodcastList(), "pods.xml");
+                    XmlCommunication.SaveListData(podcastList.GetPodcastList(), "Podcasts.xml");
                     fillCbCategories(); //Ändra staten av comboboxen kategori
                     MessageBox.Show("Podden har nu lagts till! :)");
 
@@ -84,7 +90,8 @@ namespace RSSfeed
 
         private void btnNewCategory_Click(object sender, EventArgs e)
         {
-
+            RenameCategoryForm aForm = new RenameCategoryForm();
+            aForm.ShowDialog();
         }
 
         private void numericUpdateFrequency_ValueChanged(object sender, EventArgs e)
@@ -99,20 +106,34 @@ namespace RSSfeed
             fillCbCategories();
         }
 
-        private void cbPods_SelectedIndexChanged(object sender, EventArgs e)
+        private async void cbPods_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstBoxPods.Items.Clear();
+            loadEpisodes();
+        }
+
+        private void loadEpisodes()
+        {
             foreach (var podcast in podcastList.GetPodcastList())
             {
-                foreach (var episode in podcast.GetEpisodes())
+                if (podcast.Name == (string)cbPods.SelectedItem)
                 {
-                    if (podcast.Name == (string)cbPods.SelectedItem)
+
+                    foreach (var episode in podcast.GetEpisodes())
+                    {
                         lstBoxPods.Items.Add(episode.AvsnittsTitel);
+
+                    }
+
+
                 }
+
 
 
             }
         }
+
+
 
         private void btnConfigPodd_Click(object sender, EventArgs e)
         {
@@ -132,7 +153,7 @@ namespace RSSfeed
                 }
                 //Skapar en ny dialogruta och matar in ett podcast objekt till konstruktorn
                 //Som att köra in en bil till service där den ska målas om och få nytt regnummer
-                DialogForm dialogForm = new DialogForm(aPod, podcastList);
+                ModifyPodcastForm dialogForm = new ModifyPodcastForm(aPod, podcastList);
 
                 dialogForm.Show();
             }
@@ -162,7 +183,7 @@ namespace RSSfeed
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Episodes anEpisode = null;
 
             foreach (Podcast podcast in podcastList.GetPodcastList())
             {
@@ -176,6 +197,7 @@ namespace RSSfeed
                     {
                         if (episode.AvsnittsTitel == (string)lstBoxPods.SelectedItem)
                         {
+                            anEpisode = episode;
                             wplayer.URL = episode.AvsnittsMediaUrl;
                             currentlyPlayingPod = episode.AvsnittsTitel;
                             if (!currentlyPlaying)
@@ -183,11 +205,13 @@ namespace RSSfeed
                                 podInitialized = true;
                                 currentlyPlaying = true;
                                 wplayer.controls.play();
+                                break;
                             }
                             else
                             {
                                 wplayer.controls.pause();
                                 currentlyPlaying = false;
+                                break;
                             }
 
                         }
@@ -197,6 +221,7 @@ namespace RSSfeed
                 {
                     if (!currentlyPlaying)
                     {
+
                         wplayer.controls.play();
                         currentlyPlaying = true;
                     }
@@ -232,6 +257,63 @@ namespace RSSfeed
             podcastList.RemovePostcast(podFromCb);
 
 
+        }
+
+
+        private void btnShowMore_Click(object sender, EventArgs e)
+        {
+            String ettNamn = lstBoxPods.SelectedItem.ToString();
+            String enUrl = null;
+
+            foreach (var podcast in podcastList.GetPodcastList())
+            {
+                if (podcast.Name == (string)cbPods.SelectedItem)
+                {
+                    foreach (var episode in podcast.GetEpisodes())
+                    {
+                        if (episode.AvsnittsTitel.ToString() == ettNamn)
+                        {
+                            enUrl = episode.AvsnittsUrl;
+                        }
+                    }
+
+                }
+
+
+            }
+
+            Process.Start(enUrl, enUrl);
+        }
+
+        private void loadCbCategories()
+        {
+
+            categoryList = XmlCommunication.LoadCategory();
+            foreach (var item in categoryList.GetCategoryList())
+            {
+
+                cbNewCategories.Items.Add(item.Name);
+            }
+        }
+
+        private void cbNewCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateCategoryCb();
+        }
+
+        internal void updateCategoryCb()
+        {
+            categoryList = XmlCommunication.LoadCategory();
+            cbNewCategories.Items.Clear();
+            foreach (var category in categoryList.GetCategoryList())
+            {
+                cbNewCategories.Items.Add(category.Name);
+            }
+        }
+
+        private void cbNewCategories_MouseClick(object sender, MouseEventArgs e)
+        {
+            updateCategoryCb();
         }
     }
 }
