@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Category>
-    <Name>Sport</Name>
-  </Category>
-  <Category>
-    <Name>Dokumentär</Name>
-  </Category>
-  <Category>
-    <Name>Hälsa</Name>
-  </Category>
-</ArrayOfCategory>
+<ArrayOfCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

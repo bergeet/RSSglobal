@@ -233,5 +233,9 @@ namespace RSSfeed
 
 
         }
+        public static void showMessage(string input)
+        {
+            MessageBox.Show(input);
+        }
     }
 }

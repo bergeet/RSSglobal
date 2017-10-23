@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using System.Windows.Forms;
+
 
 namespace Logics
 {
@@ -18,13 +20,13 @@ namespace Logics
         {
             //Laddar xml-filen
             //TODO: Om XMLfilen är tom så får man error
+            var xmlDoc = XDocument.Load("Category.xml");
+            var category = xmlDoc.Descendants("Category");
+
+            Validation.checkIfNull(xmlDoc);
 
             try
             {
-               
-                var xmlDoc = XDocument.Load("Category.xml");
-
-                var category = xmlDoc.Descendants("Category");
 
                 //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
                 var catagObj = category.Select(element => new Category
@@ -40,8 +42,7 @@ namespace Logics
 
             catch (Exception e)
             {
-
-                SaveListData(input, "Category.xml");
+                MessageBox.Show(e.Message);
             }
             
         }
@@ -51,12 +52,12 @@ namespace Logics
             //Laddar xml-filen
             //TODO: Om XMLfilen är tom så får man error
             CategoryList input = new CategoryList();
+            var xmlDoc = XDocument.Load("Category.xml");
+            var category = xmlDoc.Descendants("Category");
+
+            Validation.checkIfNull(xmlDoc);
             try
             {
-
-                var xmlDoc = XDocument.Load("Category.xml");
-
-                var category = xmlDoc.Descendants("Category");
 
                 //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
                 var catagObj = category.Select(element => new Category
@@ -71,10 +72,10 @@ namespace Logics
                
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
-
-                SaveListData(input, "Category.xml");
+                MessageBox.Show("Xml-dokumentet hittades tyvärr inte, var snäll och start om programmet så skapas ett nytt :)");
+                newXml.createNewXmlCategory();
             }
             return input;
         }
@@ -83,12 +84,14 @@ namespace Logics
         {
             //Laddar xml-filen
             //TODO: Om XMLfilen är tom så får man error
+           
 
             try
             {
-                var xmlDoc = XDocument.Load("Podcasts.xml");
-
+                var xmlDoc = XDocument.Load("pods.xml");
                 var podcasts = xmlDoc.Descendants("Podcast");
+
+                Validation.checkIfNull(xmlDoc);
 
                 //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
                 var podObj = podcasts.Select(element => new Podcast
@@ -106,8 +109,10 @@ namespace Logics
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Xml-dokumentet hittades tyvärr inte, var snäll och start om programmet så skapas ett nytt :)");
+                newXml.createNewXmlDefault();
                 
+               
             }
            
         }
