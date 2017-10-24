@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Logics
 {
@@ -30,6 +31,15 @@ namespace Logics
             {
                 throw new ValidationException("Du måste sätta ett intervall större än 0");
             }
+        }
+
+        public static void checkIfNull(XDocument input)
+        {
+            if (input == null)
+            {
+                throw new ValidationException("Ops, det verkar som dokumentet du försöker ladda är tomt!");
+            }
+
         }
 
     }

@@ -25,10 +25,6 @@ namespace Logics
             setTimer();
         }
 
-
-
-
-
         public List<Episodes> GetEpisodes()
         {
             episodeList = Episodefetch.FetchEpisodes(Url);

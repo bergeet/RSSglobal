@@ -22,6 +22,7 @@ namespace RSSfeed
     {
         PodcastList podcastList = new PodcastList();
         CategoryList categoryList = new CategoryList();
+        FetchLists fetch = new FetchLists();
         int intervalMS;
         bool currentlyPlaying = false;
         bool podInitialized = false;
@@ -31,9 +32,7 @@ namespace RSSfeed
         public MainForm()
         {
             InitializeComponent();
-
             categoryList = XmlCommunication.LoadCategory();
-
             XmlCommunication.loadPodcasts(podcastList);
             setCategoryListOnLoad();
 
@@ -47,8 +46,6 @@ namespace RSSfeed
                 cbCategories.Items.Add(category.Name);
             }
 
-          
-            //XmlCommunication.SaveListData(categoryList.GetCategoryList(), "Category.xml");
         }
 
         private void btnAddPod_Click(object sender, EventArgs e)
@@ -106,34 +103,25 @@ namespace RSSfeed
             fillCbCategories();
         }
 
-        private async void cbPods_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbPods_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstBoxPods.Items.Clear();
-            loadEpisodes();
+            loadEpisodesToListBox();
         }
 
-        private void loadEpisodes()
+        private async void loadEpisodesToListBox()
         {
-            foreach (var podcast in podcastList.GetPodcastList())
+            Task<List<Episodes>> task = fetch.loadEpisodesTask((string)cbPods.SelectedItem);
+ 
+            List<Episodes> x = await task;
+            foreach (var episode in x)
             {
-                if (podcast.Name == (string)cbPods.SelectedItem)
-                {
-
-                    foreach (var episode in podcast.GetEpisodes())
-                    {
-                        lstBoxPods.Items.Add(episode.AvsnittsTitel);
-
-                    }
-
-
-                }
-
-
+                lstBoxPods.Items.Add(episode.AvsnittsTitel);
 
             }
+
+
         }
-
-
 
         private void btnConfigPodd_Click(object sender, EventArgs e)
         {
@@ -224,11 +212,13 @@ namespace RSSfeed
 
                         wplayer.controls.play();
                         currentlyPlaying = true;
+                        break;
                     }
                     else
                     {
                         wplayer.controls.pause();
                         currentlyPlaying = false;
+                        break;
                     }
                 }
             }
