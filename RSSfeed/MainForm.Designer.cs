@@ -214,7 +214,7 @@
             // 
             // btnRemoveFeed
             // 
-            this.btnRemoveFeed.Location = new System.Drawing.Point(605, 457);
+            this.btnRemoveFeed.Location = new System.Drawing.Point(596, 457);
             this.btnRemoveFeed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFeed.Name = "btnRemoveFeed";
             this.btnRemoveFeed.Size = new System.Drawing.Size(121, 28);
@@ -225,7 +225,7 @@
             // 
             // btnConfigPodd
             // 
-            this.btnConfigPodd.Location = new System.Drawing.Point(460, 457);
+            this.btnConfigPodd.Location = new System.Drawing.Point(451, 457);
             this.btnConfigPodd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfigPodd.Name = "btnConfigPodd";
             this.btnConfigPodd.Size = new System.Drawing.Size(139, 28);
@@ -287,7 +287,7 @@
             // 
             // btnShowMore
             // 
-            this.btnShowMore.Location = new System.Drawing.Point(460, 490);
+            this.btnShowMore.Location = new System.Drawing.Point(566, 490);
             this.btnShowMore.Name = "btnShowMore";
             this.btnShowMore.Size = new System.Drawing.Size(151, 25);
             this.btnShowMore.TabIndex = 23;
