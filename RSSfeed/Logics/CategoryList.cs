@@ -24,6 +24,19 @@ namespace Logics
             categoryList.Add(category);
         }
 
+        public void removeCategoryFromList(string name)
+        {
+            Category category = new Category();
+            foreach (var aCategory in categoryList)
+            {
+                if (aCategory.Name == name)
+                {
+                    category = aCategory;
+                }
+            }
+            categoryList.Remove(category);
+        }
+
       
     }
 }

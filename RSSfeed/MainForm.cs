@@ -22,7 +22,7 @@ namespace RSSfeed
     {
         PodcastList podcastList = new PodcastList();
         CategoryList categoryList = new CategoryList();
-        FetchLists fetch = new FetchLists();
+        FetchLists fetch;
         int intervalMS;
         bool currentlyPlaying = false;
         bool podInitialized = false;
@@ -35,6 +35,7 @@ namespace RSSfeed
             categoryList = XmlCommunication.LoadCategory();
             XmlCommunication.loadPodcasts(podcastList);
             setCategoryListOnLoad();
+            
 
         }
 
@@ -111,16 +112,12 @@ namespace RSSfeed
 
         private async void loadEpisodesToListBox()
         {
-            Task<List<Episodes>> task = fetch.loadEpisodesTask((string)cbPods.SelectedItem);
- 
-            List<Episodes> x = await task;
-            foreach (var episode in x)
+            fetch = new FetchLists();
+           
+            foreach (var episode in fetch.loadEpisodes((string)cbPods.SelectedItem))
             {
                 lstBoxPods.Items.Add(episode.AvsnittsTitel);
-
             }
-
-
         }
 
         private void btnConfigPodd_Click(object sender, EventArgs e)
@@ -275,35 +272,25 @@ namespace RSSfeed
             Process.Start(enUrl, enUrl);
         }
 
-        private void loadCbCategories()
-        {
-
-            categoryList = XmlCommunication.LoadCategory();
-            foreach (var item in categoryList.GetCategoryList())
-            {
-
-                cbNewCategories.Items.Add(item.Name);
-            }
-        }
-
-        private void cbNewCategories_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateCategoryCb();
-        }
-
-        internal void updateCategoryCb()
+        internal void updateCategoryCb(ComboBox combobox)
         {
             categoryList = XmlCommunication.LoadCategory();
-            cbNewCategories.Items.Clear();
+            combobox.Items.Clear();
             foreach (var category in categoryList.GetCategoryList())
             {
-                cbNewCategories.Items.Add(category.Name);
+                combobox.Items.Add(category.Name);
             }
         }
 
         private void cbNewCategories_MouseClick(object sender, MouseEventArgs e)
         {
-            updateCategoryCb();
+            updateCategoryCb(cbNewCategories);
         }
+
+        private void cbCategories_MouseClick(object sender, MouseEventArgs e)
+        {
+                updateCategoryCb(cbCategories);
+            
+       }
     }
 }

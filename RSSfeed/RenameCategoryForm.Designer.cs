@@ -35,11 +35,12 @@
             this.lblNewName = new System.Windows.Forms.Label();
             this.rbChange = new System.Windows.Forms.RadioButton();
             this.rbAddNew = new System.Windows.Forms.RadioButton();
+            this.rbRemove = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(15, 228);
+            this.btnSubmit.Location = new System.Drawing.Point(15, 253);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 0;
@@ -103,11 +104,23 @@
             this.rbAddNew.Text = "Lägg till ny kategori";
             this.rbAddNew.UseVisualStyleBackColor = true;
             // 
+            // rbRemove
+            // 
+            this.rbRemove.AutoSize = true;
+            this.rbRemove.Location = new System.Drawing.Point(15, 209);
+            this.rbRemove.Name = "rbRemove";
+            this.rbRemove.Size = new System.Drawing.Size(130, 21);
+            this.rbRemove.TabIndex = 8;
+            this.rbRemove.TabStop = true;
+            this.rbRemove.Text = "Ta bort kategori";
+            this.rbRemove.UseVisualStyleBackColor = true;
+            // 
             // RenameCategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 263);
+            this.ClientSize = new System.Drawing.Size(190, 297);
+            this.Controls.Add(this.rbRemove);
             this.Controls.Add(this.rbAddNew);
             this.Controls.Add(this.rbChange);
             this.Controls.Add(this.lblNewName);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Label lblNewName;
         private System.Windows.Forms.RadioButton rbChange;
         private System.Windows.Forms.RadioButton rbAddNew;
+        private System.Windows.Forms.RadioButton rbRemove;
     }
 }

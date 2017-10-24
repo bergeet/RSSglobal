@@ -35,6 +35,9 @@ namespace RSSfeed
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+
+            string checkedCategory = (string)cbCategories.SelectedItem;
+
             if (rbAddNew.Checked)
             {
                 categoryList.addCategoryToList(txtName.Text);
@@ -43,7 +46,7 @@ namespace RSSfeed
             }
             else if (rbChange.Checked)
             {
-                string checkedCategory = (string)cbCategories.SelectedItem;
+                
                 foreach (var category in categoryList.GetCategoryList())
                 {
                     if(category.Name == checkedCategory)
@@ -54,6 +57,14 @@ namespace RSSfeed
                     }
                 }
             }
+            else if(rbRemove.Checked)
+            {
+                categoryList.removeCategoryFromList(checkedCategory);
+                XmlCommunication.RemoveEntryFromXml(checkedCategory);
+                
+                
+            }
+            this.Dispose();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

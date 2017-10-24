@@ -15,7 +15,7 @@ namespace Logics
             XmlDocument doc = new XmlDocument();
             doc.LoadXml("<item><name>default</name></item>");
 
-            XmlTextWriter writer = new XmlTextWriter("pods.xml", null);
+            XmlTextWriter writer = new XmlTextWriter("Podcasts.xml", null);
             writer.Formatting = Formatting.Indented;
             doc.Save(writer);
         }

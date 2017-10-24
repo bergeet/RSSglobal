@@ -14,19 +14,17 @@ namespace Logics
     public abstract class XmlCommunication
     {
 
-
-
         public static void LoadCategory(CategoryList input)
-        {
-            //Laddar xml-filen
-            //TODO: Om XMLfilen är tom så får man error
-            var xmlDoc = XDocument.Load("Category.xml");
-            var category = xmlDoc.Descendants("Category");
-
-            Validation.checkIfNull(xmlDoc);
+        {     
 
             try
             {
+                //Laddar xml-filen
+                //TODO: Om XMLfilen är tom så får man error
+                var xmlDoc = XDocument.Load("Category.xml");
+                var category = xmlDoc.Descendants("Category");
+
+                Validation.checkIfNull(xmlDoc);
 
                 //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
                 var catagObj = category.Select(element => new Category
@@ -49,15 +47,17 @@ namespace Logics
 
         public static CategoryList LoadCategory()
         {
-            //Laddar xml-filen
-            //TODO: Om XMLfilen är tom så får man error
             CategoryList input = new CategoryList();
-            var xmlDoc = XDocument.Load("Category.xml");
-            var category = xmlDoc.Descendants("Category");
 
-            Validation.checkIfNull(xmlDoc);
             try
             {
+                //Laddar xml-filen
+                //TODO: Om XMLfilen är tom så får man error
+               
+                var xmlDoc = XDocument.Load("Category.xml");
+                var category = xmlDoc.Descendants("Category");
+
+                Validation.checkIfNull(xmlDoc);
 
                 //För varje entry så skapas ett nytt podcast-objekt i minnet som vi kan använda
                 var catagObj = category.Select(element => new Category
@@ -88,7 +88,7 @@ namespace Logics
 
             try
             {
-                var xmlDoc = XDocument.Load("pods.xml");
+                var xmlDoc = XDocument.Load("Podcasts.xml");
                 var podcasts = xmlDoc.Descendants("Podcast");
 
                 Validation.checkIfNull(xmlDoc);
@@ -110,7 +110,7 @@ namespace Logics
             catch (Exception)
             {
                 MessageBox.Show("Xml-dokumentet hittades tyvärr inte, var snäll och start om programmet så skapas ett nytt :)");
-                NewXml.createNewXmlDefault();
+                NewXml.createNewXmlDefault(); 
 
 
             }
@@ -125,6 +125,17 @@ namespace Logics
             {
                 serializer.Serialize(stream, obj);
             }
+        }
+
+        public static void RemoveEntryFromXml(string categoryName)
+        {
+            XDocument doc = XDocument.Load("Category.xml");
+            var selectedEntry = from node in doc.Descendants("Category")
+                    let attr = node.Attribute("Name")
+                    where attr != null && attr.Value == categoryName
+                    select node;
+            selectedEntry.ToList().ForEach(x => x.Remove());
+            doc.Save("Category.xml");
         }
 
 
